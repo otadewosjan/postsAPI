@@ -20,6 +20,6 @@ function allPosts(request, response) {
         let reply = JSON.parse(items);
         response.send(reply);
     } else {
-        response.send("no posts");
+        throw new Error('No posts available');
     }
 }
